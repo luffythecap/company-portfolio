@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GSAP Mobile Scroll Animations</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    
+    .mobile-optimized {
+      will-change: transform, opacity;
+    }
+    
+    /* Custom animations for mobile */
+    @media (max-width: 768px) {
+      .mobile-card {
+        transform: translateY(30px) scale(0.95);
+      }
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans overflow-x-hidden">
+
+  <section class="max-w-8xl mx-auto p-6 bg-cover bg-center bg-no-repeat min-h-screen" style="background-image: url('./images/aboutuss.png');">
+    
+    <!-- Header -->
+    <div class="text-center card" data-delay="0">
+      <h2 class="text-4xl text-red-700 font-extrabold text-center mb-4 animate-fadeInUp">49Frame</h2>
+      <p class="text-lg text-white text-center mb-10 animate-fadeInUp delay-100">
+        our project
+      </p>
+    </div>
+
+    <!-- Mission & Vision Cards -->
+    <div class="grid md:grid-cols-2 gap-6 animate-fadeInUp delay-200">
+      
+      <!-- Real Estate Card -->
+     <div class="card mobile-optimized bg-white/20 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border-2 border-red-700 hover:scale-[1.04] transition-transform duration-300" data-delay="0.2">
+  <!-- Video with autoplay, muted, and loop -->
+  <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Advertising Hypereel Video in Black White Simple Style.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="text-xl text-white font-bold bg-red-600 px-6 py-2 rounded-full w-fit mb-4 shadow-md">
+    Real Estate
+  </div>
+
+  <p class="text-white text-lg leading-relaxed mb-4">
+    The application is based on the real estate domain and built using
+    <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">React Native</span>,
+    <span class="inline-block bg-pink-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">Appwrite</span>, and
+    <span class="inline-block bg-cyan-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">Tailwind CSS</span>.
+  </p>
+
+  <a href="./slider1.html" target="_blank">
+    <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+      View
+    </button>
+  </a>
+</div>
+
+      <!-- Library Management Card -->
+      <div class="card mobile-optimized bg-white/20 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border-2 border-red-700 hover:scale-[1.02] transition-transform duration-300" data-delay="0.4">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Cream Colorful Earth Rocket Illustration Vector World Book Day Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-lg sm:text-xl text-white font-bold bg-red-600 px-6 py-2 rounded-full w-fit mb-4 shadow-md">
+          Library Management System
+        </div>
+        <p class="text-white text-base sm:text-lg leading-relaxed mb-4">
+          This Library Management System includes a borrowing and registration module. Built using
+          <span class="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-sm">
+            Python
+          </span>.
+        </p>
+        <a href="./slider2.html" target="_blank">
+          <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+            View
+          </button>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Values & Slogan -->
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <!-- Company Portfolio Card -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 md:col-span-2 transform transition duration-500 hover:scale-[1.02]" data-delay="0.6">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Blue, Green and Black Minimalist Geometric All About Me Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-45 rounded-full font-bold mb-2">
+          <h3 class="ml-4">company portfolio website</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This company portfolio webpage
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/webtricode/" target="_blank" rel="noopener noreferrer"
+     class="bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300 inline-block">
+          Live Demo
+        </a>
+      </div>
+
+      <!-- iPhone Clone Card -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg text-center border-4 border-red-700 transform transition duration-500 hover:scale-[1.02]" data-delay="0.8">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Yellow Futuristic Coming Soon Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <h3 class="text-2xl font-bold mb-2 text-red-400">"iphone web clone"</h3>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This is reference website which that we can do animation also 
+          <span class="inline-block bg-yellow-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">react js</span>,</p>
+        <a href="./slider3.html" target="_blank">
+          <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+            View
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Two Column Section -->
+    <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0 mt-8">
+      
+      <!-- Enterprises Template -->
+      <div class="card mobile-optimized flex-1 bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transform transition-all duration-500 hover:scale-[1.02]" data-delay="1.0">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Minimalist Happy Birthday Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-60 rounded-full font-bold mb-2">
+          <h3 class="ml-4">enterprises template</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This enterprises portfolio webpage
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/yash-enterprises/" target="_blank" rel="noopener noreferrer">
+          <button class="bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+            Live Demo
+          </button>
+        </a>
+      </div>
+
+      <!-- Gaming Portfolio -->
+      <div class="card mobile-optimized flex-[1.3] bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transform transition-all duration-500 hover:scale-[1.02]" data-delay="1.2">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Blue Geometric Gaming Stream Starting Soon Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-70 rounded-full font-bold mb-2">
+          <h3 class="ml-4">gaming portfolio</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This is reference website which that we can do animation also 
+          <span class="inline-block bg-yellow-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">react js</span>,</p>
+        <a href="./slider4.html" target="_blank">
+          <button class="bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+            view
+          </button>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Three Column Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <!-- Fashion Template -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transition-transform transform hover:scale-[1.02] duration-300" data-delay="1.4">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Black Bold Fashion Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-70 rounded-full font-bold mb-2">
+          <h3 class="ml-4">Fashion template</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This Fashion template base in 
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/soulblaze/index.html" class="inline-block bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+          Live Demo
+        </a>
+      </div>
+
+      <!-- Hospital Template -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transition-transform transform hover:scale-[1.02] duration-300" data-delay="1.6">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Blue Modern Thank You For Watching Health Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-50 rounded-full font-bold mb-2">
+          <h3 class="ml-4">hospital template</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This hospital webpage base on 
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/surjicare/" class="inline-block bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+          Live Demo
+        </a>
+      </div>
+
+      <!-- Sahjanand Website -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transition-transform transform hover:scale-[1.02] duration-300" data-delay="1.8">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Orange and Teal Casual Corporate Financial Advisor Finance LinkedIn Video Ad.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-70 rounded-full font-bold mb-2">
+          <h3 class="ml-4">sahjanand website</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This advisory webpage base on 
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/sajanant/" class="inline-block bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+  </section>
+  <!-- ------------------------------------------------------------------------------ -->
+   <section class="max-w-8xl mx-auto p-6 bg-cover bg-center bg-no-repeat min-h-screen" style="background-image: url('./images/aboutuss.png');">
+    
+    <!-- Mission & Vision Cards -->
+    <div class="grid md:grid-cols-2 gap-6 animate-fadeInUp delay-200">
+      
+      <!-- Real Estate Card -->
+     <div class="card mobile-optimized bg-white/20 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border-2 border-red-700 hover:scale-[1.04] transition-transform duration-300" data-delay="0.2">
+  <!-- Video with autoplay, muted, and loop -->
+  <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Black and White Old Movie Silent Film Cinema Projector Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="text-xl text-white font-bold bg-red-600 px-6 py-2 rounded-full w-fit mb-4 shadow-md">
+    Movie app
+  </div>
+
+  <p class="text-white text-lg leading-relaxed mb-4">
+    The application is based on the Movie app domain and built using
+    <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">React Native</span>,
+    <span class="inline-block bg-pink-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">Appwrite</span>, and
+    <span class="inline-block bg-cyan-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">Tailwind CSS</span>.
+  </p>
+
+  <a href="./slider5.html" target="_blank">
+    <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+      View
+    </button>
+  </a>
+</div>
+
+      <!-- Library Management Card -->
+      <div class="card mobile-optimized bg-white/20 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border-2 border-red-700 hover:scale-[1.02] transition-transform duration-300" data-delay="0.4">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Dark Black and Yellow Modern Bold Podcast Youtube Intro Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-lg sm:text-xl text-white font-bold bg-red-600 px-6 py-2 rounded-full w-fit mb-4 shadow-md">
+          podcastr web app
+        </div>
+        <p class="text-white text-base sm:text-lg leading-relaxed mb-4">
+          This is podcast web app base on 
+          <span class="inline-block bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-sm">
+            typescript
+          </span>,
+          <span class="inline-block bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-sm">
+            convex
+          </span>
+          <span class="inline-block bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-sm">
+            clerk
+          </span>
+        </p>
+        <a href="./slider6.html" target="_blank">
+          <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+            View
+          </button>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Values & Slogan -->
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <!-- Company Portfolio Card -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 md:col-span-2 transform transition duration-500 hover:scale-[1.02]" data-delay="0.6">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Black and White Minimalist Welcome To My Channel YouTube Intro Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-45 rounded-full font-bold mb-2">
+          <h3 class="ml-4">developer portfolio website</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This developer portfolio webpage
+          <span class="inline-block bg-yellow-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">react js</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">vite</span>.
+        </p>
+        <a href="./slider7.html" target="_blank">
+          <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+            View
+          </button>
+        </a>
+      </div>
+
+      <!-- iPhone Clone Card -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg text-center border-4 border-red-700 transform transition duration-500 hover:scale-[1.02]" data-delay="0.8">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Red and Black Modern Opening Profile Youtube Intro Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <h3 class="text-2xl font-bold mb-2 text-red-400">"immigrations website"</h3>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This is reference website which that we can do animation also 
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-purple-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">bootstrap</span>,
+          <span class="inline-block bg-yellow-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">js</span>
+        </p>
+        <a href="https://luffythecap.github.io/HSM-IMMIGRATIONS-WEBSITE/" target="_blank" rel="noopener noreferrer">
+          <button class="bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+            Live Demo
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Two Column Section -->
+    <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0 mt-8">
+      
+      <!-- Enterprises Template -->
+      <div class="card mobile-optimized flex-1 bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transform transition-all duration-500 hover:scale-[1.02]" data-delay="1.0">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Red Yellow Ripped Paper Fashion Vlog Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-60 rounded-full font-bold mb-2">
+          <h3 class="ml-4">Petrichor web</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This is Petrichor web based on
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/Petrichor/" target="_blank" rel="noopener noreferrer">
+          <button class="bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+            Live Demo
+          </button>
+        </a>
+      </div>
+
+      <!-- Gaming Portfolio -->
+      <div class="card mobile-optimized flex-[1.3] bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transform transition-all duration-500 hover:scale-[1.02]" data-delay="1.2">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Black and Gray Flatlay Fashion Business Style Clothes Startup Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-70 rounded-full font-bold mb-2">
+          <h3 class="ml-4">clothing </h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          this cloating page design based on
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+          <a href="https://luffythecap.github.io/clothing/" class="inline-block bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+          Live Demo
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Three Column Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <!-- Fashion Template -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transition-transform transform hover:scale-[1.02] duration-300" data-delay="1.4">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Black and Green Modern Geometric Animation Youtube Channel intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-70 rounded-full font-bold mb-2">
+          <h3 class="ml-4">e-book converter</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This e-book converter base in 
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">python</span>.
+        </p>
+        <a href="./slider8.html" target="_blank">
+          <button class="mt-2 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full transition duration-300 shadow-lg">
+            View
+          </button>
+        </a>
+      </div>
+
+      <!-- Hospital Template -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transition-transform transform hover:scale-[1.02] duration-300" data-delay="1.6">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Blue Modern Thank You For Watching Health Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-50 rounded-full font-bold mb-2">
+          <h3 class="ml-4">hospital template</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This hospital webpage base on 
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/surjicare/" class="inline-block bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+          Live Demo
+        </a>
+      </div>
+
+      <!-- Sahjanand Website -->
+      <div class="card mobile-optimized bg-white/30 backdrop-blur-lg p-6 rounded-3xl shadow-lg border-4 border-red-700 transition-transform transform hover:scale-[1.02] duration-300" data-delay="1.8">
+        <div class="w-full h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl shadow-md mb-4 overflow-hidden">
+    <video 
+      class="w-full h-full object-cover rounded-2xl" 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+      poster="./images/realestate-thumbnail.jpg"
+    >
+      <source src="./video/Orange and Teal Casual Corporate Financial Advisor Finance LinkedIn Video Ad.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+        <div class="text-xl text-white p-2 bg-red-600 w-70 rounded-full font-bold mb-2">
+          <h3 class="ml-4">sahjanand website</h3>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-4">
+          This advisory webpage base on 
+          <span class="inline-block bg-orange-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">html</span>,
+          <span class="inline-block bg-blue-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">css</span>, and
+          <span class="inline-block bg-yellow-500 px-3 py-1 rounded-full text-sm font-semibold mx-1 shadow-md">javascript</span>.
+        </p>
+        <a href="https://luffythecap.github.io/sajanant/" class="inline-block bg-red-700 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-800 transition duration-300">
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Mobile detection
+    const isMobile = window.innerWidth <= 768;
+    
+    // Timeline for coordinated animations
+    let masterTimeline = gsap.timeline();
+
+    // Enhanced mobile-optimized scroll animations
+    function initScrollAnimations() {
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach((card, index) => {
+        const delay = parseFloat(card.dataset.delay) || 0;
+        
+        // Different animation settings for mobile vs desktop
+        const animationConfig = {
+          y: isMobile ? 30 : 50,
+          opacity: 0,
+          scale: isMobile ? 0.95 : 0.98,
+          duration: isMobile ? 0.6 : 0.8,
+          ease: "power2.out"
+        };
+
+        // Create the animation
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: card,
+            start: isMobile ? "top 85%" : "top 80%",
+            end: isMobile ? "bottom 20%" : "bottom 30%",
+            toggleActions: "play none none reverse",
+            // Reduce refresh rate on mobile for better performance
+            refreshPriority: isMobile ? -1 : 0,
+            // Add mobile-specific optimizations
+            fastScrollEnd: isMobile ? true : false,
+            preventOverlaps: true
+          }
+        });
+
+        // Set initial state
+        gsap.set(card, animationConfig);
+
+        // Animate to visible state with delay
+        tl.to(card, {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: animationConfig.duration,
+          ease: animationConfig.ease,
+          delay: delay * (isMobile ? 0.5 : 1) // Reduced delay multiplier for mobile
+        });
+
+        // Add subtle hover effect for non-mobile
+        if (!isMobile) {
+          card.addEventListener('mouseenter', () => {
+            gsap.to(card, {
+              scale: 1.02,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+          });
+
+          card.addEventListener('mouseleave', () => {
+            gsap.to(card, {
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+          });
+        }
+
+        masterTimeline.add(tl, delay);
+      });
+    }
+
+    // Staggered entrance animation for grid items
+    function initGridAnimations() {
+      const gridItems = document.querySelectorAll('.grid .card');
+      
+      gsap.set(gridItems, {
+        y: isMobile ? 20 : 40,
+        opacity: 0,
+        scale: 0.9
+      });
+
+      ScrollTrigger.batch(gridItems, {
+        onEnter: (elements) => {
+          gsap.to(elements, {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.6,
+            stagger: isMobile ? 0.1 : 0.2,
+            ease: "power2.out",
+            overwrite: true
+          });
+        },
+        start: isMobile ? "top 90%" : "top 75%",
+        refreshPriority: isMobile ? -1 : 0
+      });
+    }
+
+    // Mobile-specific optimizations
+    function optimizeForMobile() {
+      if (isMobile) {
+        // Reduce refresh rate for better performance
+        gsap.config({
+          force3D: true,
+          nullTargetWarn: false
+        });
+
+        // Optimize ScrollTrigger for mobile
+        ScrollTrigger.config({
+          limitCallbacks: true,
+          syncInterval: 150 // Slower refresh rate on mobile
+        });
+      }
+    }
+
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      optimizeForMobile();
+      initScrollAnimations();
+      initGridAnimations();
+      
+      // Handle orientation change on mobile
+      if (isMobile) {
+        window.addEventListener('orientationchange', () => {
+          setTimeout(() => {
+            ScrollTrigger.refresh();
+          }, 500);
+        });
+      }
+    });
+
+    // Performance monitoring
+    if (isMobile) {
+      let fps = 0;
+      let lastTime = performance.now();
+      
+      function measureFPS() {
+        const currentTime = performance.now();
+        fps = Math.round(1000 / (currentTime - lastTime));
+        lastTime = currentTime;
+        
+        // Adjust animation complexity based on FPS
+        if (fps < 30) {
+          ScrollTrigger.config({ syncInterval: 200 });
+        }
+        
+        requestAnimationFrame(measureFPS);
+      }
+      
+      measureFPS();
+    }
+  </script>
+
+</body>
+</html>
